@@ -15,7 +15,7 @@
   "author": "safex",
   "license": "ISC",
   "dependencies": {
-    "@safe-engine/cocos": "^1.5.5",
+    "@safe-engine/cocos": "^1.5.7",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
@@ -28,7 +28,7 @@
     "@types/lodash-es": "^4.17.12",
     "@typescript-eslint/eslint-plugin": "^8.36.0",
     "@typescript-eslint/parser": "^8.36.0",
-    "babel-plugin-safe-x-transform": "^5.3.4",
+    "babel-plugin-safe-x-transform": "^5.3.5",
     "eslint": "^9.31.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.5.1",
