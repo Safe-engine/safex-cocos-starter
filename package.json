@@ -1,0 +1,41 @@
+{
+  "name": "safex-cocos-starter",
+  "version": "1.0.1",
+  "description": "game with safex cocos",
+  "type": "module",
+  "scripts": {
+    "start": "parcel src/index.html -p 8089 --no-cache",
+    "sync-res": "bun ./node_modules/safex-sync-res/src/index.ts",
+    "predev": "bun run sync-res",
+    "dev": "parcel src/index.html -p 8091",
+    "build": "parcel build src/index.html --reporter @parcel/reporter-bundle-analyzer",
+    "fix": "eslint ./src --fix"
+  },
+  "keywords": [],
+  "author": "safex",
+  "license": "ISC",
+  "dependencies": {
+    "@safe-engine/cocos": "^1.5.5",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/plugin-syntax-jsx": "^7.27.1",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.31.0",
+    "@parcel/config-default": "^2.15.4",
+    "@parcel/reporter-bundle-analyzer": "^2.15.4",
+    "@types/lodash-es": "^4.17.12",
+    "@typescript-eslint/eslint-plugin": "^8.36.0",
+    "@typescript-eslint/parser": "^8.36.0",
+    "babel-plugin-safe-x-transform": "^5.3.4",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
+    "parcel": "^2.15.4",
+    "safex-sync-res": "^1.2.3",
+    "typescript": "^5.8.3"
+  }
+}
