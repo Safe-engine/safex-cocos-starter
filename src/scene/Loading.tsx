@@ -24,8 +24,8 @@ export class Loading extends ComponentX {
     return (
       <SceneComponent>
         <LabelComp node={{ xy: [406, 140], color: CYAN }} string="Loading" />
-        <SpriteRender node={{ position: Vec2(40, 150) }} spriteFrame={sf_progress_bg}>
-          <ProgressTimerComp $ref={this.loadingSprite} node={{ position: Vec2(10, 1118) }} spriteFrame={sf_progress_bar} fillRange={0} />
+        <SpriteRender node={{ position: Vec2(540, 250), opacity: 100 }} spriteFrame={sf_progress_bg}>
+          <ProgressTimerComp $ref={this.loadingSprite} node={{ position: Vec2(181, 30) }} spriteFrame={sf_progress_bar} fillRange={0} />
         </SpriteRender>
       </SceneComponent>
     )

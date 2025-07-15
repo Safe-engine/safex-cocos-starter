@@ -1,6 +1,6 @@
-import { initWorld, loadScene, startGame } from '@safe-engine/cocos'
+import { initWorld, loadAll, loadScene, startGame } from '@safe-engine/cocos'
 
-import { defaultFont } from './assets'
+import { defaultFont, sf_progress_bar } from './assets'
 import { Loading } from './scene/Loading'
 import { designedResolution } from './settings'
 
@@ -15,6 +15,8 @@ startGame(
   designedResolution,
   () => {
     initWorld(defaultFont)
-    loadScene(Loading)
+    loadAll([sf_progress_bar], (p) => {
+      if (p >= 1) loadScene(Loading)
+    })
   },
 )

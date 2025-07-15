@@ -15,7 +15,7 @@
   "author": "safex",
   "license": "ISC",
   "dependencies": {
-    "@safe-engine/cocos": "^1.5.7",
+    "@safe-engine/cocos": "^1.5.8",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
@@ -26,8 +26,8 @@
     "@parcel/config-default": "^2.15.4",
     "@parcel/reporter-bundle-analyzer": "^2.15.4",
     "@types/lodash-es": "^4.17.12",
-    "@typescript-eslint/eslint-plugin": "^8.36.0",
-    "@typescript-eslint/parser": "^8.36.0",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
     "babel-plugin-safe-x-transform": "^5.3.5",
     "eslint": "^9.31.0",
     "eslint-config-prettier": "^10.1.5",
