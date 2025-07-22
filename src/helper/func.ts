@@ -1,4 +1,4 @@
-import { NodeComp, Size, Vec2 } from '@safe-engine/cocos'
+import { NodeComp, Size, Vec2 } from '@safe-engine/pixi'
 
 export function calculateAngelInRadian(from: Vec2, to: Vec2): Float {
   const deltaX = to.x - from.x

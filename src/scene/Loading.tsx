@@ -1,4 +1,4 @@
-import { ComponentX, LabelComp, loadScene, ProgressTimerComp, SceneComponent, SpriteRender, Vec2 } from '@safe-engine/cocos'
+import { ComponentX, LabelComp, loadScene, ProgressTimerComp, SceneComponent, SpriteRender, Vec2 } from '@safe-engine/pixi'
 
 import { sf_progress_bar, sf_progress_bg } from '../assets'
 import { loadAssets } from '../binding/loader'
@@ -16,7 +16,9 @@ export class Loading extends ComponentX {
     console.log('onProgress', p)
     this.loadingSprite.setFillRange(p)
     if (p === 1) {
-      loadScene(Home)
+      setTimeout(() => {
+        loadScene(Home)
+      }, 0)
     }
   }
 

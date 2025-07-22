@@ -1,22 +1,12 @@
-import { initWorld, loadAll, loadScene, startGame } from '@safe-engine/cocos'
+import { Assets, loadScene, startGame, Texture } from '@safe-engine/pixi'
 
-import { defaultFont, sf_progress_bar } from './assets'
+import { defaultFont, sf_progress_bar, sf_progress_bg } from './assets'
 import { Loading } from './scene/Loading'
 import { designedResolution } from './settings'
 
-startGame(
-  {
-    debugMode: 1,
-    showFPS: false,
-    frameRate: 60,
-    id: 'gameCanvas',
-    renderMode: 1,
-  },
-  designedResolution,
-  () => {
-    initWorld(defaultFont)
-    loadAll([sf_progress_bar], (p) => {
-      if (p >= 1) loadScene(Loading)
-    })
-  },
-)
+async function start() {
+  await startGame(defaultFont, designedResolution, Assets)
+  await Assets.load<Texture>([sf_progress_bar, sf_progress_bg])
+  loadScene(Loading)
+}
+start()

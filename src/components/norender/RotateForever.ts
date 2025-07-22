@@ -1,4 +1,4 @@
-import { NoRenderComponentX } from '@safe-engine/cocos'
+import { NoRenderComponentX } from '@safe-engine/pixi'
 
 export default class RotateForever extends NoRenderComponentX {
   update(dt: Float) {
