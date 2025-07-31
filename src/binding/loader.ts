@@ -11,6 +11,10 @@ export function loadAssets(cb: (progress: number) => void) {
   })
   Assets.addBundle('fonts', fontBundle)
   return Promise.all([Assets.loadBundle('fonts')]).then(() => {
-    return Assets.load<Texture>(Object.values(TextureAssets), cb)
+    return Assets.load<Texture>(Object.values(TextureAssets), (p) =>
+      setTimeout(() => {
+        cb(p)
+      }),
+    )
   })
 }

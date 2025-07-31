@@ -1,4 +1,4 @@
-import { ComponentX, LabelComp, loadScene, ProgressTimerComp, SceneComponent, SpriteRender, Vec2 } from '@safe-engine/pixi'
+import { ComponentX, LabelComp, loadScene, ProgressTimerComp, SceneComponent, SpriteRender } from '@safe-engine/pixi'
 
 import { sf_progress_bar, sf_progress_bg } from '../assets'
 import { loadAssets } from '../binding/loader'
@@ -13,12 +13,10 @@ export class Loading extends ComponentX {
   }
 
   onProgress(p: Float) {
-    console.log('onProgress', p)
+    // console.log('onProgress', p)
     this.loadingSprite.setFillRange(p)
     if (p === 1) {
-      setTimeout(() => {
-        loadScene(Home)
-      }, 0)
+      loadScene(Home)
     }
   }
 
@@ -26,8 +24,8 @@ export class Loading extends ComponentX {
     return (
       <SceneComponent>
         <LabelComp node={{ xy: [406, 140], color: CYAN }} string="Loading" />
-        <SpriteRender node={{ position: Vec2(540, 250), opacity: 100 }} spriteFrame={sf_progress_bg}>
-          <ProgressTimerComp $ref={this.loadingSprite} node={{ position: Vec2(181, 30) }} spriteFrame={sf_progress_bar} fillRange={0} />
+        <SpriteRender node={{ xy: [960, 850] }} spriteFrame={sf_progress_bg}>
+          <ProgressTimerComp $ref={this.loadingSprite} node={{ xy: [-161, -10] }} spriteFrame={sf_progress_bar} fillRange={0} />
         </SpriteRender>
       </SceneComponent>
     )
