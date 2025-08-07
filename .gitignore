@@ -20,3 +20,4 @@ build/
 assets/
 .safex
 parcel-bundle-reports
+.firebase
