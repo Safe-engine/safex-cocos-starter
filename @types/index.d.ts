@@ -1,5 +1,4 @@
 declare type Float = number
-declare type bool = boolean
 declare type Integer = number
 
 interface HMR {
@@ -10,3 +9,5 @@ interface HMR {
 declare namespace module {
   const hot: HMR
 }
+
+declare let process: Process
