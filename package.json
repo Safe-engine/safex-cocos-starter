@@ -15,7 +15,7 @@
   "author": "safex",
   "license": "ISC",
   "dependencies": {
-    "@safe-engine/cocos": "^1.9.6",
+    "@safe-engine/cocos": "^1.10.1",
     "cocos-html5-ts": "^1.1.10",
     "lodash-es": "^4.17.21"
   },
@@ -23,19 +23,19 @@
     "@babel/core": "^7.28.0",
     "@babel/plugin-syntax-jsx": "^7.27.1",
     "@eslint/eslintrc": "^3.3.1",
-    "@eslint/js": "^9.32.0",
+    "@eslint/js": "^9.33.0",
     "@parcel/config-default": "^2.15.4",
     "@parcel/reporter-bundle-analyzer": "^2.15.4",
     "@parcel/transformer-raw": "^2.15.4",
     "@types/lodash-es": "^4.17.12",
-    "@typescript-eslint/eslint-plugin": "^8.39.0",
-    "@typescript-eslint/parser": "^8.39.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
     "babel-plugin-safe-x-transform": "^5.3.5",
-    "eslint": "^9.32.0",
+    "eslint": "^9.33.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.4",
     "parcel": "^2.15.4",
-    "safex-sync-res": "^1.2.7",
+    "safex-sync-res": "^1.2.8",
     "typescript": "^5.9.2"
   }
 }

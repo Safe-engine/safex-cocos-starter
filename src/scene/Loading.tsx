@@ -8,16 +8,15 @@ import { Home } from './Home'
 export class Loading extends ComponentX {
   loadingSprite: ProgressTimerComp
 
-  async start() {
-    loadAssets(this.onProgress.bind(this))
+  start() {
+    loadAssets(this.onProgress.bind(this), () => {
+      loadScene(Home)
+    })
   }
 
   onProgress(p: Float) {
     // console.log('onProgress', p)
-    this.loadingSprite.setFillRange(p)
-    if (p === 1) {
-      loadScene(Home)
-    }
+    this.loadingSprite.fillRange = p
   }
 
   render() {
