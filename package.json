@@ -15,7 +15,7 @@
   "author": "safex",
   "license": "ISC",
   "dependencies": {
-    "@safe-engine/cocos": "^1.10.1",
+    "@safe-engine/cocos": "^1.10.2",
     "cocos-html5-ts": "^1.1.10",
     "lodash-es": "^4.17.21"
   },

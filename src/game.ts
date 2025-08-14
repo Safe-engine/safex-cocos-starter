@@ -5,7 +5,7 @@ import { Loading } from './scene/Loading'
 import { designedResolution } from './settings'
 
 startGame(defaultFont, designedResolution).then(() => {
-  loadAll([sf_progress_bar], (p) => {
-    if (p >= 1) loadScene(Loading)
+  loadAll([sf_progress_bar], null, () => {
+    loadScene(Loading)
   })
 })
