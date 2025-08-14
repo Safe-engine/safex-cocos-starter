@@ -16,7 +16,7 @@ export class Loading extends ComponentX {
 
   onProgress(p: Float) {
     // console.log('onProgress', p)
-    this.loadingSprite.setFillRange(p)
+    this.loadingSprite.fillRange = p
   }
 
   render() {

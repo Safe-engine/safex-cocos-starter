@@ -15,7 +15,7 @@
   "author": "safex",
   "license": "ISC",
   "dependencies": {
-    "@safe-engine/pixi": "^8.6.3",
+    "@safe-engine/pixi": "^8.6.4",
     "lodash-es": "^4.17.21"
   },
   "devDependencies": {
