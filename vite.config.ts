@@ -6,10 +6,6 @@ export default defineConfig({
     'process.env': {},
   },
   publicDir: 'res',
-  build: {
-    minify: false,
-    copyPublicDir: false,
-  },
   server: { port: 8089 },
   plugins: [safexTransform()],
 })
