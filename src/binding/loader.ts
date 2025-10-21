@@ -1,11 +1,8 @@
 import { loadAll } from '@safe-engine/cocos'
 
-import * as FontAssets from '../assets/FontAssets'
-import * as TextureAssets from '../assets/TextureAssets'
+import * as allAssets from '../assets'
 
 export async function loadAssets(cb: (progress: number) => void, onCompleted: () => void) {
-  // load the texture we need
-  const assets = [...Object.values(TextureAssets), ...Object.values(FontAssets)]
-  await loadAll(assets, cb)
+  await loadAll(allAssets, cb)
   onCompleted()
 }
