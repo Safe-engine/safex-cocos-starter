@@ -1,9 +1,9 @@
 import { ComponentX, LabelComp, SceneComponent } from '@safe-engine/cocos'
 
-import { BackButton } from '../components/BackButton'
+import BackButton from '../components/BackButton'
 import RotateForever from '../components/norender/RotateForever'
 
-export class Game extends ComponentX {
+export default class Game extends ComponentX {
   render() {
     return (
       <SceneComponent>

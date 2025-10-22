@@ -2,9 +2,9 @@ import { ButtonComp, ComponentX, instantiate, LabelComp, SpriteRender } from '@s
 
 import { sf_button } from '../assets'
 import { ORANGE } from '../helper/constant'
-import { Home } from '../scene/Home'
+import Home from '../scene/Home'
 
-export class BackButton extends ComponentX {
+export default class BackButton extends ComponentX {
   onPress() {
     instantiate(Home)
   }

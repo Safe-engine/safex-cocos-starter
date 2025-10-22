@@ -2,9 +2,9 @@ import { ButtonComp, ComponentX, ExtraDataComp, LabelComp, loadScene, SceneCompo
 
 import { sf_button } from '../assets'
 import { CYAN, ORANGE } from '../helper/constant'
-import { Game } from './Game'
+import Game from './Game'
 
-export class Home extends ComponentX {
+export default class Home extends ComponentX {
   onPress() {
     loadScene(Game)
   }
