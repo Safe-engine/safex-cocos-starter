@@ -8,7 +8,7 @@ export function calculateAngelInRadian(from: Vec2, to: Vec2): Float {
 }
 
 export function getWorldPosition(node: NodeComp): Vec2 {
-  return node.convertToWorldSpaceAR(Vec2(node.getPosition()))
+  return node.convertToWorldSpaceAR(Vec2(node.position))
 }
 
 export function validNode(node: NodeComp): boolean {

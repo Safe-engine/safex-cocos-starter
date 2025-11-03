@@ -3,9 +3,9 @@ import { ComponentX, LabelComp, loadScene, ProgressTimerComp, SceneComponent, Sp
 import { sf_progress_bar, sf_progress_bg } from '../assets'
 import { loadAssets } from '../binding/loader'
 import { CYAN } from '../helper/constant'
-import { Home } from './Home'
+import Home from './Home'
 
-export class Loading extends ComponentX {
+export default class Loading extends ComponentX {
   loadingSprite: ProgressTimerComp
 
   async start() {
