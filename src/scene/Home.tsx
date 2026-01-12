@@ -1,10 +1,10 @@
-import { ButtonComp, ComponentX, ExtraDataComp, LabelComp, loadScene, SceneComponent, SpriteRender } from '@safe-engine/cocos'
+import { ButtonComp, ExtraDataComp, LabelComp, loadScene, SceneComponent, SpriteRender } from '@safe-engine/pixi'
 
 import { sf_button } from '../assets'
 import { CYAN, ORANGE } from '../helper/constant'
 import Game from './Game'
 
-export default class Home extends ComponentX {
+export default class Home extends SceneComponent {
   onPress() {
     loadScene(Game)
   }

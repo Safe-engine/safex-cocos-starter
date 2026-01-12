@@ -2,8 +2,8 @@
   "Create class with start and render methods": {
     "prefix": "classsr",
     "body": [
-      "import { ComponentX, NodeRender, SpriteRender } from \"@safe-engine/cocos\"\n",
-      "export default class ${TM_FILENAME_BASE}  extends ComponentX {",
+      "import { ComponentX, NodeRender, SpriteRender } from \"@safe-engine/pixi\"\n",
+      "export default class ${TM_FILENAME_BASE} extends ComponentX {",
       "  start() {",
       "    // TODO: implement start logic",
       "  }",

@@ -1,11 +1,11 @@
-import { ComponentX, LabelComp, loadScene, ProgressTimerComp, SceneComponent, SpriteRender } from '@safe-engine/cocos'
+import { LabelComp, loadScene, ProgressTimerComp, SceneComponent, SpriteRender } from '@safe-engine/pixi'
 
 import { sf_progress_bar, sf_progress_bg } from '../assets'
 import { loadAssets } from '../binding/loader'
 import { CYAN } from '../helper/constant'
 import Home from './Home'
 
-export default class Loading extends ComponentX {
+export default class Loading extends SceneComponent {
   loadingSprite: ProgressTimerComp
 
   start() {
