@@ -1,4 +1,4 @@
-import { LabelComp, SceneComponent } from '@safe-engine/pixi'
+import { LabelComp, SceneComponent } from '@safe-engine/cocos'
 import BackButton from '../components/BackButton'
 import RotateForever from '../components/norender/RotateForever'
 

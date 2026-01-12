@@ -1,4 +1,4 @@
-import { ButtonComp, ExtraDataComp, LabelComp, loadScene, SceneComponent, SpriteRender } from '@safe-engine/pixi'
+import { ButtonComp, ExtraDataComp, LabelComp, loadScene, SceneComponent, SpriteRender } from '@safe-engine/cocos'
 
 import { sf_button } from '../assets'
 import { CYAN, ORANGE } from '../helper/constant'

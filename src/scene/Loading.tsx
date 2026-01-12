@@ -1,4 +1,4 @@
-import { LabelComp, loadScene, ProgressTimerComp, SceneComponent, SpriteRender } from '@safe-engine/pixi'
+import { LabelComp, loadScene, ProgressTimerComp, SceneComponent, SpriteRender } from '@safe-engine/cocos'
 
 import { sf_progress_bar, sf_progress_bg } from '../assets'
 import { loadAssets } from '../binding/loader'
