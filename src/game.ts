@@ -1,9 +1,9 @@
 import { loadScene, startGame } from '@safe-engine/cocos'
 
-import { defaultFont } from './assets'
+import { lilita_one_regularFont } from './assets'
 import Loading from './scene/Loading'
 import { designedResolution } from './settings'
 
-startGame(defaultFont, designedResolution).then(() => {
+startGame(lilita_one_regularFont, designedResolution).then(() => {
   loadScene(Loading)
 })
