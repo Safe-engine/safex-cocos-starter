@@ -1,4 +1,4 @@
-import { ButtonComp, ComponentX, instantiate, LabelComp } from '@safe-engine/cocos'
+import { ButtonComp, ComponentX, instantiate, LabelComp, WidgetComp } from '@safe-engine/cocos'
 
 import { sf_button } from '../assets'
 import { ORANGE } from '../helper/constant'
@@ -12,6 +12,7 @@ export default class BackButton extends ComponentX {
     return (
       <ButtonComp node={{ xy: [850, 240] }} spriteFrame={sf_button} onPress={this.onPress}>
         <LabelComp node={{ xy: [80, 30], color: ORANGE }} string="Back" size={48} />
+        <WidgetComp top={1} left={0} />
       </ButtonComp>
     )
   }
