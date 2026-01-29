@@ -2,7 +2,7 @@
   "Create class with start and render methods": {
     "prefix": "classsr",
     "body": [
-      "import { ComponentX, NodeRender, SpriteRender } from \"@safe-engine/pixi\"\n",
+      "import { ComponentX, NodeRender, SpriteRender } from '@safe-engine/cocos'\n",
       "export default class ${TM_FILENAME_BASE} extends ComponentX {",
       "  start() {",
       "    // TODO: implement start logic",
@@ -14,6 +14,23 @@
       "}"
     ],
     "description": "Create a class named after the file with start and render methods"
+  },
+  "Create class with props": {
+    "prefix": "classprops",
+    "body": [
+      "import { ComponentX, BaseComponentProps, SpriteRender } from '@safe-engine/cocos'\n",
+      "interface ${TM_FILENAME_BASE}Props extends BaseComponentProps<${TM_FILENAME_BASE}> {\n  spriteFrame: string\n}\n",
+      "export default class ${TM_FILENAME_BASE} extends ComponentX<${TM_FILENAME_BASE}Props> {",
+      "  start() {",
+      "    // TODO: implement start logic",
+      "  }",
+      "",
+      "  render() {",
+      "    return <SpriteRender spriteFrame={}></SpriteRender>",
+      "  }",
+      "}"
+    ],
+    "description": "Create a class named after the file with props"
   },
   "localData": {
     "prefix": "localData",
