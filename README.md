@@ -42,9 +42,9 @@ export class GameScene extends SceneComponent {
   sprite: SpriteRender
   label: LabelComp
 
-  onPress() {
+  onPress(target: ButtonComp) {
     this.sprite.spriteFrame = 'other.sprite.png'
-    this.label.string = 'Pressed'
+    this.label.string = target.node.name
   }
 
   onTouchMove(event: Touch) {
@@ -62,9 +62,8 @@ export class GameScene extends SceneComponent {
           onTouchMove={this.onTouchMove}
         />
         <LabelComp $ref={this.label} node={{ xy: [106, 240] }} string="Hello safex" font={defaultFont} />
-        <SpriteRender $ref={this.sprite} node={{ xy: [500, 600] }} spriteFrame={'path/to/sprite.png'}>
-          <ButtonComp onPress={this.onPress} />
-        </SpriteRender>
+        <ButtonComp $ref={this.sprite} node={{ xy: [500, 600], name: 'sprite' }} spriteFrame={'path/to/sprite.png'} onPress={this.onPress} >
+        </ButtonComp>
       </SceneComponent>
     )
   }
