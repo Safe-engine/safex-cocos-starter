@@ -37,6 +37,7 @@ npm install @safe-engine/cocos
 ```tsx GameScene.tsx
 import { SceneComponent, LabelComp, ButtonComp, SpriteRender, instantiate, Touch } from '@safe-engine/cocos'
 import ColliderSprite from './ColliderSprite'
+import { sf_sprite } from '../assets'
 
 export class GameScene extends SceneComponent {
   sprite: SpriteRender
@@ -48,10 +49,10 @@ export class GameScene extends SceneComponent {
   }
 
   onTouchMove(event: Touch) {
-    console.log('onTouchMove', event.getLocation())
+    const {x,y} = event.getLocation()
     const sprite = instantiate(ColliderSprite)
-    sprite.node.posX = event.getLocationX()
-    sprite.node.posY = event.getLocationY()
+    sprite.node.posX = x
+    sprite.node.posY = y
     this.node.addChild(sprite)
   }
 
@@ -62,7 +63,7 @@ export class GameScene extends SceneComponent {
           onTouchMove={this.onTouchMove}
         />
         <LabelComp $ref={this.label} node={{ xy: [106, 240] }} string="Hello safex" font={defaultFont} />
-        <ButtonComp $ref={this.sprite} node={{ xy: [500, 600], name: 'sprite' }} spriteFrame={'path/to/sprite.png'} onPress={this.onPress} >
+        <ButtonComp $ref={this.sprite} node={{ xy: [500, 600], name: 'sf_sprite' }} spriteFrame={sf_sprite} onPress={this.onPress} >
         </ButtonComp>
       </SceneComponent>
     )
@@ -85,7 +86,7 @@ export class ColliderSprite extends ComponentX {
   render() {
     return (
       <SpriteRender node={{ xy: [640, 360] }} spriteFrame={sf_crash}>
-        <BoxCollider height={100} width={100} onCollisionEnter={this.onCollisionEnter} />
+        <BoxCollider height={100} width={100} onCollisionEnter={this.onCollisionEnter} tag={3} />
       </SpriteRender>
     )
   }
@@ -107,7 +108,7 @@ export class PhysicsCollider extends ComponentX {
   render() {
     return (
       <SpriteRender node={{ xy: [640, 360] }} spriteFrame={sf_crash}>
-        <RigidBody type={DynamicBody} onBeginContact={this.onBeginContact}></RigidBody>
+        <RigidBody type={DynamicBody} onBeginContact={this.onBeginContact} tag={2} isSensor ></RigidBody>
         <PhysicsBoxCollider height={100} width={100}></PhysicsBoxCollider>
       </SpriteRender>
     )
