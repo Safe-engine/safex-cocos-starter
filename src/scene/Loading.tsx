@@ -20,13 +20,11 @@ export default class Loading extends SceneComponent {
   }
 
   render() {
-    return (
-      <SceneComponent>
-        <LabelComp node={{ xy: [406, 140], color: CYAN }} string="Loading" />
-        <SpriteRender node={{ xy: [540, 250], opacity: 100 }} spriteFrame={sf_progress_bg}>
-          <ProgressTimerComp $ref={this.loadingSprite} node={{ xy: [181, 30] }} spriteFrame={sf_progress_bar} fillRange={0} />
-        </SpriteRender>
-      </SceneComponent>
-    )
+    <SceneComponent>
+      <LabelComp node={{ xy: [406, 140], color: CYAN }} string="Loading" />
+      <SpriteRender node={{ xy: [540, 250], opacity: 100 }} spriteFrame={sf_progress_bg}>
+        <ProgressTimerComp $ref={this.loadingSprite} node={{ xy: [181, 30] }} spriteFrame={sf_progress_bar} fillRange={0} />
+      </SpriteRender>
+    </SceneComponent>
   }
 }

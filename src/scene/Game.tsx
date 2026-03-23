@@ -4,13 +4,11 @@ import RotateForever from '../components/norender/RotateForever'
 
 export default class Game extends SceneComponent {
   render() {
-    return (
-      <SceneComponent>
-        <LabelComp node={{ xy: [540, 540] }} string="Game">
-          <RotateForever />
-        </LabelComp>
-        <BackButton />
-      </SceneComponent>
-    )
+    <SceneComponent>
+      <LabelComp node={{ xy: [540, 540] }} string="Game">
+        <RotateForever />
+      </LabelComp>
+      <BackButton />
+    </SceneComponent>
   }
 }
