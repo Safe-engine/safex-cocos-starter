@@ -1,4 +1,4 @@
-import { LabelComp, SceneComponent } from '@safe-engine/cocos'
+import { LabelComp, SceneComponent } from '@safe-engine/webgl'
 import BackButton from '../components/BackButton'
 import RotateForever from '../components/norender/RotateForever'
 

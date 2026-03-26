@@ -2,7 +2,7 @@
   "Create class with start and render methods": {
     "prefix": "classsr",
     "body": [
-      "import { ComponentX, NodeRender, SpriteRender } from '@safe-engine/cocos'\n",
+      "import { ComponentX, NodeRender, SpriteRender } from '@safe-engine/webgl'\n",
       "export default class ${TM_FILENAME_BASE} extends ComponentX {",
       "  start() {",
       "    // TODO: implement start logic",
@@ -18,7 +18,7 @@
   "Create class with props": {
     "prefix": "classprops",
     "body": [
-      "import { ComponentX, BaseComponentProps, SpriteRender } from '@safe-engine/cocos'\n",
+      "import { ComponentX, BaseComponentProps, SpriteRender } from '@safe-engine/webgl'\n",
       "interface ${TM_FILENAME_BASE}Props extends BaseComponentProps<${TM_FILENAME_BASE}> {\n  spriteFrame: string\n}\n",
       "export default class ${TM_FILENAME_BASE} extends ComponentX<${TM_FILENAME_BASE}Props> {",
       "  start() {",

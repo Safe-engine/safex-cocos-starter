@@ -1,4 +1,4 @@
-import { loadAll } from '@safe-engine/cocos'
+import { loadAll } from '@safe-engine/webgl'
 
 import * as allAssets from '../assets'
 

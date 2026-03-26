@@ -1,4 +1,4 @@
-import { loadAll, loadScene, startGame } from '@safe-engine/cocos'
+import { loadAll, loadScene, startGame } from '@safe-engine/webgl'
 
 import { lilita_one_regularFont, sf_progress_bar, sf_progress_bg } from './assets'
 import Loading from './scene/Loading'

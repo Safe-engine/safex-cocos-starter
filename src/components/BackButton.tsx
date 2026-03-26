@@ -1,4 +1,4 @@
-import { ButtonComp, ComponentX, LabelComp, loadScene, WidgetComp } from '@safe-engine/cocos'
+import { ButtonComp, ComponentX, LabelComp, loadScene, WidgetComp } from '@safe-engine/webgl'
 
 import { sf_button } from '../assets'
 import { ORANGE } from '../helper/constant'

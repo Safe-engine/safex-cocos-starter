@@ -1,4 +1,4 @@
-import { ButtonComp, ExtraDataComp, LabelComp, loadScene, SceneComponent } from '@safe-engine/cocos'
+import { ButtonComp, ExtraDataComp, LabelComp, loadScene, SceneComponent } from '@safe-engine/webgl'
 
 import { sf_button } from '../assets'
 import { CYAN, ORANGE } from '../helper/constant'
