@@ -1,14 +1,12 @@
-import { LabelComp, SceneComponent } from '@safe-engine/webgl'
-import BackButton from '../components/BackButton'
-import RotateForever from '../components/norender/RotateForever'
+import { Label, Scene } from '@safe-engine/sdl';
+import BackButton from '../components/BackButton';
+import RotateForever from '../components/norender/RotateForever';
 
-export default class Game extends SceneComponent {
+export default class Game extends Scene {
   render() {
-    <SceneComponent>
-      <LabelComp node={{ xy: [540, 540] }} string="Game">
-        <RotateForever />
-      </LabelComp>
-      <BackButton />
-    </SceneComponent>
+    <Label node={{ x: 540, y: 540 }} string="Game">
+      <RotateForever />
+    </Label>;
+    <BackButton />
   }
 }

@@ -1,21 +1,20 @@
-import { ButtonComp, ExtraDataComp, LabelComp, loadScene, SceneComponent } from '@safe-engine/webgl'
+import { Button, Label, loadScene, Scene, Sprite } from '@safe-engine/sdl'
 
 import { sf_button } from '../assets'
 import { CYAN, ORANGE } from '../helper/constant'
 import Game from './Game'
 
-export default class Home extends SceneComponent {
+export default class Home extends Scene {
   onPress() {
     loadScene(Game)
   }
 
   render() {
-    <SceneComponent>
-      <LabelComp node={{ xy: [406, 140], color: CYAN }} string="hello safex" />
-      <ButtonComp node={{ xy: [200, 120 + 150] }} spriteFrame={sf_button} onPress={this.onPress}>
-        <LabelComp node={{ xy: [80, 30], color: ORANGE }} string="Game" size={48} />
-        <ExtraDataComp key="id" value={1} />
-      </ButtonComp>
-    </SceneComponent>
+    <Label node={{ x: 406, y: 140, color: CYAN }} string="hello safex" />;
+    <Sprite spriteFrame={sf_button} >
+      <Button node={{ x: 200, y: 270 }} onPress={this.onPress}>
+        <Label node={{ color: ORANGE }} string="Game" size={48} />
+      </Button>
+    </Sprite>
   }
 }

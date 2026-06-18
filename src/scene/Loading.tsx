@@ -1,12 +1,12 @@
-import { LabelComp, loadScene, ProgressTimerComp, SceneComponent, SpriteRender } from '@safe-engine/webgl'
+import { Label, loadScene, ProgressBar, Scene, Sprite } from '@safe-engine/sdl'
 
 import { sf_progress_bar, sf_progress_bg } from '../assets'
 import { loadAssets } from '../binding/loader'
 import { CYAN } from '../helper/constant'
 import Home from './Home'
 
-export default class Loading extends SceneComponent {
-  loadingSprite: ProgressTimerComp
+export default class Loading extends Scene {
+  loadingSprite: ProgressBar
 
   start() {
     loadAssets(this.onProgress.bind(this), () => {
@@ -16,15 +16,13 @@ export default class Loading extends SceneComponent {
 
   onProgress(p: Float) {
     // console.log('onProgress', p)
-    this.loadingSprite.fillRange = p
+    this.loadingSprite.value = p
   }
 
   render() {
-    <SceneComponent>
-      <LabelComp node={{ xy: [406, 140], color: CYAN }} string="Loading" />
-      <SpriteRender node={{ xy: [540, 250], opacity: 100 }} spriteFrame={sf_progress_bg}>
-        <ProgressTimerComp $ref={this.loadingSprite} node={{ xy: [181, 30] }} spriteFrame={sf_progress_bar} fillRange={0} />
-      </SpriteRender>
-    </SceneComponent>
+    <Label node={{ x: 406, y: 140, color: CYAN }} string="Loading" />;
+    <Sprite node={{ x: 540, y: 250, opacity: 100 }} spriteFrame={sf_progress_bg}>
+      <ProgressBar $ref={this.loadingSprite} node={{ x: 181, y: 30 }} spriteFrame={sf_progress_bar} fillRange={0} />
+    </Sprite>
   }
 }

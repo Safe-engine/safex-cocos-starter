@@ -1,4 +1,4 @@
-import { NodeComp, Size, Vec2 } from '@safe-engine/webgl'
+import { NodeComp, Size, Vec2 } from '@safe-engine/sdl'
 
 export function calculateAngelInRadian(from: Vec2, to: Vec2): Float {
   const deltaX = to.x - from.x

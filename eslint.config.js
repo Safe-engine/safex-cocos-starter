@@ -9,7 +9,7 @@ export default defineConfig(
   stylistic.configs.customize({
     // indent: 2,
     // quotes: 'single',
-    // semi: false,
+    semi: false,
     // jsx: true,
     braceStyle: '1tbs',
     commaDangle: 'only-multiline',
@@ -33,6 +33,7 @@ export default defineConfig(
       ],
       'prefer-template': 'error',
       '@stylistic/jsx-self-closing-comp': 'error',
+      '@stylistic/omitLastInOneLineBlock': ['error', 'never'],
     },
   },
   {

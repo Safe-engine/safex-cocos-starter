@@ -14,7 +14,7 @@
   "author": "safex",
   "license": "ISC",
   "dependencies": {
-    "@safe-engine/webgl": "^1.0.1",
+    "@safe-engine/sdl": "^0.0.1",
     "lodash-es": "^4.17.23"
   },
   "devDependencies": {

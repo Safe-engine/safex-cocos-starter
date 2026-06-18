@@ -5,7 +5,3 @@ export enum Group {
 }
 
 export const colliderMatrix = [[true], [false, false, true], [false, true]]
-export const designedResolution = {
-  width: 1080,
-  height: 1920,
-}

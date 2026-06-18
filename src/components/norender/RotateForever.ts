@@ -1,4 +1,4 @@
-import { ComponentX } from '@safe-engine/webgl'
+import { ComponentX } from '@safe-engine/sdl'
 
 export default class RotateForever extends ComponentX {
   update(dt: Float) {

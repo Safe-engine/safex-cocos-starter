@@ -1,4 +1,4 @@
-import { Color4B } from '@safe-engine/webgl'
+import { Color4B } from '@safe-engine/sdl'
 
 export const CYAN = Color4B(0, 255, 255, 255)
 export const RED = Color4B(255, 0, 0, 255)
