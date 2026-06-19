@@ -15,11 +15,11 @@ export default class Loading extends Scene {
   }
 
   onProgress(p: Float) {
-    // console.log('onProgress', p)
+    console.log('onProgress', p)
     this.loadingSprite.value = p
   }
 
-  render() {
+  __view() {
     <Label node={{ x: 406, y: 140, color: CYAN }} string="Loading" />;
     <Sprite node={{ x: 540, y: 250, opacity: 100 }} spriteFrame={sf_progress_bg}>
       <ProgressBar $ref={this.loadingSprite} node={{ x: 181, y: 30 }} spriteFrame={sf_progress_bar} fillRange={0} />

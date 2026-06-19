@@ -1,4 +1,4 @@
-import { ButtonComp, ComponentX, LabelComp, loadScene, WidgetComp } from '@safe-engine/sdl'
+import { Button, ComponentX, Label, loadScene, Sprite, Widget } from '@safe-engine/sdl'
 
 import { sf_button } from '../assets'
 import { ORANGE } from '../helper/constant'
@@ -10,9 +10,10 @@ export default class BackButton extends ComponentX {
   }
 
   render() {
-    <ButtonComp node={{ xy: [850, 240] }} spriteFrame={sf_button} onPress={this.onPress}>
-      <LabelComp node={{ xy: [80, 30], color: ORANGE }} string="Back" size={48} />
-      <WidgetComp top={1} left={0} />
-    </ButtonComp>
+    <Sprite node={{ x: 850, y: 240 }} spriteFrame={sf_button} >
+      <Button onPress={this.onPress} />
+      <Label node={{ x: 80, y: 30, color: ORANGE }} string="Back" size={48} />
+      <Widget top={1} left={0} />
+    </Sprite>
   }
 }

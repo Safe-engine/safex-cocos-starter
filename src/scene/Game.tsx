@@ -3,7 +3,7 @@ import BackButton from '../components/BackButton';
 import RotateForever from '../components/norender/RotateForever';
 
 export default class Game extends Scene {
-  render() {
+  __view() {
     <Label node={{ x: 540, y: 540 }} string="Game">
       <RotateForever />
     </Label>;

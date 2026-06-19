@@ -6,7 +6,7 @@
   "scripts": {
     "sync-res": "bun ./node_modules/safex-sync-res/src/index.ts",
     "predev": "bun run sync-res",
-    "dev": "vite",
+    "dev": "vite --config web/vite.config.ts --host",
     "build": "tsc && vite build",
     "fix": "eslint ./src --fix"
   },
@@ -14,20 +14,20 @@
   "author": "safex",
   "license": "ISC",
   "dependencies": {
-    "@safe-engine/sdl": "^0.0.1",
-    "lodash-es": "^4.17.23"
+    "@safe-engine/sdl": "^0.0.6",
+    "lodash-es": "^4.18.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/lodash-es": "^4.17.12",
-    "eslint": "^10.1.0",
-    "globals": "^17.4.0",
-    "jiti": "^2.6.1",
-    "safex-sync-res": "^1.3.9",
+    "eslint": "^10.5.0",
+    "globals": "^17.6.0",
+    "jiti": "^2.7.0",
+    "safex-sync-res": "^1.4.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.57.2",
-    "vite": "^7.3.1",
+    "typescript-eslint": "^8.61.1",
+    "vite": "^7.3.5",
     "vite-plugin-safex-transform": "^1.0.4"
   }
 }
