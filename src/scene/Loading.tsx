@@ -1,28 +1,33 @@
-import { Label, loadScene, ProgressBar, Scene, Sprite } from '@safe-engine/sdl'
+import { Label, ProgressBar, Scene, Sprite } from '@safe-engine/sdl'
 
 import { sf_progress_bar, sf_progress_bg } from '../assets'
 import { loadAssets } from '../binding/loader'
-import { CYAN } from '../helper/constant'
-import Home from './Home'
+import { CYAN, WHITE } from '../helper/constant'
 
 export default class Loading extends Scene {
   loadingSprite: ProgressBar
 
-  start() {
+  onEnter() {
+    console.log('start')
+    this.loadingSprite.setSize(325, 20)
+    this.loadingSprite.fillColor = WHITE
+    this.loadingSprite.backgroundColor = { r: 0, g: 0, b: 0, a: 0 }
+    // this.loadingSprite.setValue(0.5)
     loadAssets(this.onProgress.bind(this), () => {
-      loadScene(Home)
+      console.log('loadScene Home')
+      // loadScene(Home)
     })
   }
 
   onProgress(p: Float) {
     console.log('onProgress', p)
-    this.loadingSprite.value = p
+    // this.loadingSprite.setValue(p)
   }
 
   __view() {
-    <Label node={{ x: 406, y: 140, color: CYAN }} string="Loading" />;
-    <Sprite node={{ x: 540, y: 250, opacity: 100 }} spriteFrame={sf_progress_bg}>
-      <ProgressBar $ref={this.loadingSprite} node={{ x: 181, y: 30 }} spriteFrame={sf_progress_bar} fillRange={0} />
+    <Label node={{ x: 406, y: 140, color: CYAN, width: 400 }} string="Loading" />;
+    <Sprite node={{ x: 540, y: 250, width: 362, height: 59 }} spriteFrame={sf_progress_bg} >
+      <ProgressBar $ref={this.loadingSprite} spriteFrame={sf_progress_bar}  fillRange={0.5}/>
     </Sprite>
   }
 }

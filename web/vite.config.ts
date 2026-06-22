@@ -16,5 +16,9 @@ export default defineConfig({
     emptyOutDir: true,
     target: "es2020",
   },
+  optimizeDeps: {
+    exclude: ['@safe-engine/sdl'],
+  },
+  server: { port: 8098 },
   plugins: [sdlTsxTransform()],
 });
