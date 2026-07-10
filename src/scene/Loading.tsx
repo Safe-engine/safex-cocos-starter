@@ -9,16 +9,14 @@ export default class Loading extends Scene {
   loadingSprite: ProgressBar
 
   onEnter() {
-    console.log('start')
     // this.loadingSprite.setValue(0.5)
     loadAssets(this.onProgress.bind(this), () => {
-      console.log('loadScene Home')
       loadScene(Home)
     })
   }
 
   onProgress(p: Float) {
-    console.log('onProgress', p)
+    // console.log('onProgress', p)
     this.loadingSprite.setValue(p)
   }
 
