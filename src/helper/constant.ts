@@ -1,7 +1,4 @@
-
-function Color4B(r: number, g: number, b: number, a: number): Color {
-  return { r, g, b, a }
-}
+import { Color4B } from "@safe-engine/sdl"
 
 export const CYAN = Color4B(0, 255, 255, 255)
 export const RED = Color4B(255, 0, 0, 255)

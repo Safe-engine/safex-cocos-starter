@@ -2,14 +2,14 @@
   "Create class with start and render methods": {
     "prefix": "classsr",
     "body": [
-      "import { ComponentX, NodeRender, SpriteRender } from '@safe-engine/sdl'\n",
+      "import { ComponentX, Container, Sprite } from '@safe-engine/sdl'\n",
       "export default class ${TM_FILENAME_BASE} extends ComponentX {",
-      "  start() {",
+      "  onAwake() {",
       "    // TODO: implement start logic",
       "  }",
       "",
-      "  render() {",
-      "    return <NodeRender ></NodeRender>;",
+      "  __view() {",
+      "    return <Container ></Container>;",
       "  }",
       "}"
     ],
@@ -18,15 +18,15 @@
   "Create class with props": {
     "prefix": "classprops",
     "body": [
-      "import { ComponentX, BaseComponentProps, SpriteRender } from '@safe-engine/sdl'\n",
+      "import { ComponentX, BaseComponentProps, Sprite } from '@safe-engine/sdl'\n",
       "interface ${TM_FILENAME_BASE}Props extends BaseComponentProps<${TM_FILENAME_BASE}> {\n  spriteFrame: string\n}\n",
       "export default class ${TM_FILENAME_BASE} extends ComponentX<${TM_FILENAME_BASE}Props> {",
-      "  start() {",
+      "  onAwake() {",
       "    // TODO: implement start logic",
       "  }",
       "",
-      "  render() {",
-      "    return <SpriteRender spriteFrame={}></SpriteRender>",
+      "  __view() {",
+      "    return <Sprite spriteFrame={}></Sprite>",
       "  }",
       "}"
     ],
@@ -60,30 +60,30 @@
     "scope": "typescript",
     "description": "Create local storage"
   },
-  "start": {
-    "prefix": "start",
+  "onAwake": {
+    "prefix": "onAwake",
     "body": [
-      "start() {",
+      "onAwake() {",
       "  ${1}",
       "}"
     ],
     "scope": "typescriptreact",
     "description": "Create start life cycle"
   },
-  "destroy": {
-    "prefix": "destroy",
+  "onDestroy": {
+    "prefix": "onDestroy",
     "body": [
-      "destroy() {",
+      "onDestroy() {",
       "  ${1}",
       "}"
     ],
     "scope": "typescriptreact",
     "description": "Create destroy life cycle"
   },
-  "update": {
-    "prefix": "update",
+  "onUpdate": {
+    "prefix": "onUpdate",
     "body": [
-      "update(dt: Float) {",
+      "onUpdate(dt: Float) {",
       "  ${1}",
       "}"
     ],
