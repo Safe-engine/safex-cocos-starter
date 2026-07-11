@@ -12,7 +12,7 @@ export default class Home extends Scene {
   __view() {
     <Scene>
       <Label node={{ x: 406, y: 140, color: CYAN }} string="hello safex" />
-      <Sprite spriteFrame={sf_button} >
+      <Sprite spriteFrame={sf_button}>
         <Label node={{ color: ORANGE }} string="Game" size={48} />
         <Button node={{ x: 200, y: 270 }} onPress={this.onPress} />
       </Sprite>

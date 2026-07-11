@@ -21,14 +21,14 @@
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/lodash-es": "^4.17.12",
-    "eslint": "^10.6.0",
+    "eslint": "^10.7.0",
     "globals": "^17.7.0",
     "jiti": "^2.7.0",
     "magic-string": "^0.30.21",
-    "safex-sync-res": "^1.4.2",
+    "safex-sync-res": "^1.4.3",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.63.0",
     "vite": "^8.1.4",
-    "vite-plugin-safex-transform": "^1.1.1"
+    "vite-plugin-safex-transform": "^1.1.2"
   }
 }

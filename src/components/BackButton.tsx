@@ -10,7 +10,7 @@ export default class BackButton extends ComponentX {
   }
 
   __view() {
-    <Sprite node={{ x: 850, y: 240 }} spriteFrame={sf_button} >
+    <Sprite node={{ x: 850, y: 240 }} spriteFrame={sf_button}>
       <Label node={{ x: 80, y: 30, color: ORANGE }} string="Back" size={48} />
       <Button onPress={this.onPress} />
       <Widget top={1} left={0} />
