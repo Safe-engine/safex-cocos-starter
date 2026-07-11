@@ -33,7 +33,6 @@ export default defineConfig(
       ],
       'prefer-template': 'error',
       '@stylistic/jsx-self-closing-comp': 'error',
-      '@stylistic/omitLastInOneLineBlock': ['error', 'never'],
     },
   },
   {
