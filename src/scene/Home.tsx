@@ -1,4 +1,4 @@
-import { Button, Label, loadScene, Scene, Sprite } from '@safe-engine/sdl'
+import { Button, Label, loadScene, Scene } from '@safe-engine/sdl'
 
 import { sf_button } from '../assets'
 import { CYAN, ORANGE } from '../helper/constant'
@@ -11,11 +11,10 @@ export default class Home extends Scene {
 
   __view() {
     <Scene>
-      <Label node={{ x: 406, y: 140, color: CYAN }} string="hello safex" />
-      <Sprite spriteFrame={sf_button}>
+      <Label node={{ x: 529, y: 176, color: CYAN }} string="Hello Safex" />
+      <Button spriteFrame={sf_button} onPress={this.onPress} node={{ xy: [507, 609] }}>
         <Label node={{ color: ORANGE }} string="Game" size={48} />
-        <Button node={{ x: 200, y: 270 }} onPress={this.onPress} />
-      </Sprite>
+      </Button>
     </Scene>
   }
 }

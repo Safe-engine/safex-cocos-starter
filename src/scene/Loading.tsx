@@ -22,11 +22,9 @@ export default class Loading extends Scene {
 
   __view() {
     <Scene>
-      <Label node={{ x: 406, y: 140, color: CYAN, width: 400 }} string="Loading" />
+      <Label node={{ x: 539, y: 145, color: CYAN, width: 400 }} string="Loading" />
       <Sprite node={{ x: 540, y: 250, width: 362, height: 59 }} spriteFrame={sf_progress_bg}>
-        <Sprite spriteFrame={sf_progress_bar}>
-          <ProgressBar $ref={this.loadingSprite} fillRange={0.5} />
-        </Sprite>
+        <ProgressBar $ref={this.loadingSprite} fillRange={0.5} spriteFrame={sf_progress_bar} />
       </Sprite>
     </Scene>
   }

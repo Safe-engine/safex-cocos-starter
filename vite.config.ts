@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite';
-import { safexTransform } from 'vite-plugin-safex-transform';
+import { defineConfig } from 'vite'
+import { safexTransform } from 'vite-plugin-safex-transform'
 
 export default defineConfig({
   define: {
@@ -23,4 +23,4 @@ export default defineConfig({
   },
   server: { port: 8098 },
   plugins: [safexTransform()],
-});
+})
