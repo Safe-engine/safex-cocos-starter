@@ -1,4 +1,4 @@
-import { Label, loadScene, ProgressBar, Scene, Sprite } from '@safe-engine/sdl'
+import { Label, loadScene, ProgressBar, Scene, Sprite, Widget } from '@safe-engine/sdl'
 
 import { sf_progress_bar, sf_progress_bg } from '../assets'
 import { loadAssets } from '../binding/loader'
@@ -25,6 +25,7 @@ export default class Loading extends Scene {
       <Label node={{ x: 539, y: 145, color: CYAN, width: 400 }} string="Loading" />
       <Sprite node={{ x: 540, y: 250, width: 362, height: 59 }} spriteFrame={sf_progress_bg}>
         <ProgressBar $ref={this.loadingSprite} fillRange={0.5} spriteFrame={sf_progress_bar} />
+        <Widget centerVertical centerHorizon />
       </Sprite>
     </Scene>
   }
