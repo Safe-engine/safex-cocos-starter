@@ -2,7 +2,7 @@ import { Label, loadScene, ProgressBar, Scene, Sprite } from '@safe-engine/sdl'
 
 import { sf_progress_bar, sf_progress_bg } from '../assets'
 import { loadAssets } from '../binding/loader'
-import { CYAN } from '../helper/constant'
+import { CYAN } from '../helper/colors'
 import Home from './Home'
 
 export default class Loading extends Scene {

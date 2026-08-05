@@ -1,7 +1,7 @@
 import { Button, ComponentX, Label, loadScene, Widget } from '@safe-engine/sdl'
 
 import { sf_button } from '../assets'
-import { ORANGE } from '../helper/constant'
+import { ORANGE } from '../helper/colors'
 import Home from '../scene/Home'
 
 export default class BackButton extends ComponentX {

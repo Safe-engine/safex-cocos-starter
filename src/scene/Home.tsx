@@ -1,7 +1,7 @@
 import { Button, Label, loadScene, Scene } from '@safe-engine/sdl'
 
 import { sf_button } from '../assets'
-import { CYAN, ORANGE } from '../helper/constant'
+import { CYAN, ORANGE } from '../helper/colors'
 import Game from './Game'
 
 export default class Home extends Scene {
